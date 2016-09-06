@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         bConnect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new NetworkTask().execute();
+                new NetworkTask().execute(etIp.getText()+"",etPort.getText()+"");
             }
         });
     }

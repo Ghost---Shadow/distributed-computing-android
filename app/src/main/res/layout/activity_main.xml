@@ -47,7 +47,7 @@
                 android:layout_height="match_parent"
                 android:id="@+id/etPort"
                 android:hint="Port"
-                android:text="5555" />
+                android:text="@string/defaultPort" />
         </LinearLayout>
 
         <LinearLayout

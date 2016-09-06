@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">DistributedComputingAndroid</string>
     <string name="connect">Connect</string>
+    <string name="defaultPort">80</string>
 </resources>
