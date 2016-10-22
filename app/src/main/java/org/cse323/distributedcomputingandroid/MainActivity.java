@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.distributed.client.Client;
 import org.w3c.dom.Text;
@@ -40,12 +41,13 @@ public class MainActivity extends AppCompatActivity {
     private class NetworkTask extends AsyncTask<String, Integer, Long> {
         protected Long doInBackground(String... data) {
             Client client = Client.getInstance();
+            publishProgress(0);
             client.connect(data[0],Integer.parseInt(data[1]));
             return (long)0;
         }
 
         protected void onProgressUpdate(Integer... progress) {
-            //setProgressPercent(progress[0]);
+            Toast.makeText(MainActivity.this,"Connected",Toast.LENGTH_SHORT).show();
         }
 
         protected void onPostExecute(Long result) {
